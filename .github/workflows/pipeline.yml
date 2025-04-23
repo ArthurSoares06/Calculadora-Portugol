@@ -1,0 +1,24 @@
+# pipeline.yml - Esteira CI/CD
+# Dupla: Victor e Arthur
+
+name: Esteira de Pull Request
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Passo 1 - Mensagem de boas-vindas
+        run: echo "Iniciando a esteira de CI/CD..."
+
+      - name: Passo 2 - Simulando testes
+        run: echo "Executando testes (simulado)..."
+
+      - name: Passo 3 - Finalizando
+        run: echo "PR verificado com sucesso!"
